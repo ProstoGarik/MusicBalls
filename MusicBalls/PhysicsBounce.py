@@ -4,7 +4,7 @@ import pymunk.pygame_util
 
 BALL_COLLISION_TYPE = 1
 PLATFORM_COLLISION_TYPE = 2
-SOUND_OUTPUT_DEVICE = "YOUR DEVICE" # It didn't work for me without specifying the output device
+SOUND_OUTPUT_DEVICE = "Наушники гарнитуры (G435 Wireless Gaming Headset)" # It didn't work for me without specifying the output device (use getDeviceList.py)
 
 WIDTH, HEIGHT = 800, 600
 
@@ -20,9 +20,9 @@ space.gravity = (0, 980)
 
 # Note names setup
 notes = {
-    'C': pygame.mixer.Sound('noteC.mp3'),
-    'D': pygame.mixer.Sound('noteD.mp3'),
-    'B': pygame.mixer.Sound('noteB.mp3')
+    'C': pygame.mixer.Sound('note1.mp3'),
+    'D': pygame.mixer.Sound('note2.mp3'),
+    'B': pygame.mixer.Sound('note3.mp3')
 }
 
 class NotePlatform:
@@ -58,7 +58,7 @@ mass = 1
 radius = 40
 moment = pymunk.moment_for_box(mass, (60, 60))
 circle_body = pymunk.Body(mass, moment)
-circle_body.position = (100, 300) 
+circle_body.position = (150, 300) 
 circle_shape = pymunk.Circle(circle_body, radius)
 circle_shape.friction = 0.5
 circle_shape.elasticity = 1
